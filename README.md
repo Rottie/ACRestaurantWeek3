@@ -1,1 +1,50 @@
 # AC-A3Restaurant
+A3 打造餐廳作業清單
+
+1.簡介
+簡單的餐廳清單，目的是讓使用者查詢並瞭解相關餐廳的資訊
+
+2.專案功能說明
+2A.餐廳的簡單資訊
+•	照片
+•	名稱
+•	分類
+•	評分
+
+2B.餐廳的詳細資訊
+•	類別
+•	地址
+•	電話
+•	描述
+•	圖片
+
+2C.搜尋功能
+使用者可以透過搜尋餐廳名稱來找到特定的餐廳
+
+
+2D.其他功能
+按下左上角的「我的餐廳清單」會返回首頁
+
+
+3.環境建置
+•	開發環境 Visual Studio Code v1.57.1
+•	執行環境 Node.js v10.15.0
+•	框架 Express.js v4.17.1
+•	模板引擎 Express-handlebars v5.3.2
+•	實用套件 Nodemon v2.0.7
+
+4.安裝
+4A.在終端機輸入指令 Clone 此專案至電腦
+git clone https://github.com/Rottie/AC-A3Restaurant.git
+
+4B.進入專案目錄
+cd AC-A3Restaurant
+
+4C.	安裝相關套件
+npm install express express-handlebars nodemon
+
+4D.	啟動專案
+nodemon app.js
+
+4F.出現以下訊息後，即可在 http://localhost:3000 開始使用
+Express is listening on localhost:3000
