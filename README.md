@@ -36,13 +36,13 @@ A3 打造餐廳作業清單
 2I.使用者可以刪除一家餐廳
 
 3.環境建置
-•	開發環境 Visual Studio Code v1.57.1
-•	執行環境 Node.js v10.15.0
-•	框架 Express.js v4.17.1
-•	模板引擎 Express-handlebars v5.3.2
-•	實用套件 Nodemon v2.0.7
-• 資料庫   MongoDB
-• 映射工具 mongoose 5.13.2 
+3A.開發環境 Visual Studio Code v1.57.1
+3B.執行環境 Node.js v10.15.0
+3C.框架 Express.js v4.17.1
+3D.模板引擎 Express-handlebars v5.3.2
+3E.實用套件 Nodemon v2.0.7
+3F.資料庫   MongoDB
+3G.映射工具 mongoose 5.13.2 
 
 4.安裝
 4A.在終端機輸入指令 Clone 此專案至電腦
