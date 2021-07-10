@@ -1,0 +1,41 @@
+<form action="/restaurants/{{restaurants._id }}/edit" method="POST">
+
+
+
+  <h3>Restaurant name</h3>
+  <input type="text" placeholder="name" name="name" value="{{ restaurants.name }}">
+
+  <h3>Restaurant name_en</h3>
+  <input type="text" placeholder="name_en" name="name_en" value="{{ restaurants.name_en }}">
+
+  <h3>Restaurant category</h3>
+  <input type="text" placeholder="category" name="category" value="{{ restaurants.category }}">
+
+  <h3>Restaurant image url</h3>
+  <input type="text" placeholder="image" name="image" value="{{ restaurants.image }}">
+
+  <h3>Restaurant Location</h3>
+  <input type="text" placeholder="location" name="location" value="{{ restaurants.location }}">
+
+  <h3>Restaurant phone</h3>
+  <input type="text" placeholder="phone" name="phone" value="{{ restaurants.phone }}">
+
+  <h3>Restaurant Google Map Url</h3>
+  <input type="text" placeholder="google_map" name="google_map" value="{{ restaurants.google_map }}">
+
+  <h3>Restaurant rating</h3>
+  <input type="text" placeholder="rating" name="rating" value="{{ restaurants.rating }}">
+
+  <h3>Restaurant description</h3>
+  <input type="text" placeholder="description" name="description" value="{{ restaurants.description }}">
+
+
+  {{!-- 儲存按鍵 --}}
+  <button type="submit">Save</button>
+  {{!--返回主頁面按鍵 --}}
+  <button type="submit"><a href="/">back</a></button>
+  {{!--刪除按鍵 --}}
+  <form action="/restaurants/{{ restaurants._id }}/delete" method="POST" style="display: inline;">
+    <button type="submit">delete</button>
+  </form>
+</form>
