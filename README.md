@@ -32,19 +32,26 @@ A3 打造餐廳作業清單
 •	框架 Express.js v4.17.1
 •	模板引擎 Express-handlebars v5.3.2
 •	實用套件 Nodemon v2.0.7
+• 資料庫   MongoDB
+• 映射工具 Mongoose
 
 4.安裝
 4A.在終端機輸入指令 Clone 此專案至電腦
 git clone https://github.com/Rottie/ACRestaurantWeek2.git
 
 4B.進入專案目錄
-cd AC-A3Restaurant
+cd ACRestaurantWeek2
 
 4C.	安裝相關套件
-npm install express express-handlebars nodemon
+npm install express express-handlebars nodemon mongoose
 
-4D.	啟動專案
-nodemon app.js
+4D.新增種子資料
+npm run seed
 
-4F.出現以下訊息後，即可在 http://localhost:3000 開始使用
+
+4E.退出種子資料指令,開始啟動專案
+npm run dev
+
+4F.出現以下訊息後，即可在 http://localhost:3000 開始測試使用
 Express is listening on localhost:3000
+mongodb connected!
