@@ -65,12 +65,11 @@
             </div>
 
             <div class="card-body p-3">
+              <!--修改按鍵-->
+              <button type="submit"><a href="./restaurants/{{ this._id }}/edit">edit</a><!-- 加入這行 --></button>
 
               <!--查詢詳細餐廳資訊按鍵-->
               <button type="submit"><a href="./restaurants/{{ this._id }}">detail</a></button>
-
-              <!--修改按鍵-->
-              <button type="submit"><a href="./restaurants/{{ this._id }}/edit">edit</a><!-- 加入這行 --></button>
 
               <!--刪除按鍵-->
               <form action="/restaurants/{{ this._id }}/delete" method="POST" style="display: inline;">
