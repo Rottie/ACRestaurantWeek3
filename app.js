@@ -2,14 +2,15 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const mongoose = require('mongoose') // 載入 mongoose
+const mongoose = require('mongoose') 
 
-const Restaurant = require('./models/restaurant') // 載入 Todo model
+const Restaurant = require('./models/restaurant') 
 
-mongoose.connect('mongodb://localhost/restaurant', { useNewUrlParser: true, useUnifiedTopology: true }) // 設定連線到 mongoDB
+mongoose.connect('mongodb://localhost/restaurant', { useNewUrlParser: true, useUnifiedTopology: true }) 
 
 // 取得資料庫連線狀態
 const db = mongoose.connection
+
 // 連線異常
 db.on('error', () => {
   console.log('mongodb error!')
@@ -48,10 +49,8 @@ app.get('/restaurants/new', (req, res) => {
 
 //II.Create new restaurant
 app.post('/restaurants', (req, res) => {
-  const name = req.body.name     
-  const name_en = req.body.name_en   
+  const name = req.body.name        
    const category = req.body.category 
-
    const image = req.body.image
    const location = req.body.location  
    const phone = req.body.phone

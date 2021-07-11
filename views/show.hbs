@@ -55,17 +55,6 @@
 
     </div>
 
-    <div class="col-12 col-md-10 mx-auto">
-
-      {{!-- 修改餐廳資訊按鍵 --}}
-      <button type="submit"><a href="/restaurants/{{ restaurants._id }}/edit">edit</a></button>
-      {{!-- 返回主頁面按鍵 --}}
-      <button type="submit"><a href="/">back</a></button>
-      {{!-- 刪除該餐廳所有資訊 --}}
-      <form action="/restaurants/{{ restaurants._id }}/delete" method="POST" style="display: inline;">
-        <button type="submit">delete</button>
-      </form>
-    </div>
 
   </div>
 </div>
