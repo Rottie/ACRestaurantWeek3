@@ -25,22 +25,31 @@ A3 打造餐廳作業清單
 2D.其他功能
 按下左上角的「我的餐廳清單」會返回首頁
 
+2E.使用者可以新增一家餐廳
+
+2F.使用者可以瀏覽一家餐廳的詳細資訊
+
+2G.使用者可以瀏覽全部所有餐廳
+
+2H.使用者可以修改一家餐廳的資訊
+
+2I.使用者可以刪除一家餐廳
 
 3.環境建置
-•	開發環境 Visual Studio Code v1.57.1
-•	執行環境 Node.js v10.15.0
-•	框架 Express.js v4.17.1
-•	模板引擎 Express-handlebars v5.3.2
-•	實用套件 Nodemon v2.0.7
-• 資料庫   MongoDB
-• 映射工具 Mongoose
+3A.開發環境 Visual Studio Code v1.57.1
+3B.執行環境 Node.js v10.15.0
+3C.框架 Express.js v4.17.1
+3D.模板引擎 Express-handlebars v5.3.2
+3E.實用套件 Nodemon v2.0.7
+3F.資料庫   MongoDB
+3G.映射工具 mongoose 5.13.2 
 
 4.安裝
 4A.在終端機輸入指令 Clone 此專案至電腦
-git clone https://github.com/Rottie/ACRestaurantWeek2.git
+git clone https://github.com/Rottie/AC-A3Restaurant.git
 
 4B.進入專案目錄
-cd ACRestaurantWeek2
+cd AC-A3Restaurant
 
 4C.	安裝相關套件
 npm install express express-handlebars nodemon mongoose
