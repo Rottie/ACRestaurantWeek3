@@ -59,7 +59,7 @@ app.post('/restaurants', (req, res) => {
    const description = req.body.description  
 
 
-  return Restaurant.create({ name ,name_en,category,image,location,phone,google_map,rating,description})     // 存入資料庫
+  return Restaurant.create({ name ,category,image,location,phone,google_map,rating,description})     // 存入資料庫
     .then(() => res.redirect('/')) // 新增完成後導回首頁
    
     .catch(error => console.log(error))
@@ -91,7 +91,6 @@ app.get('/restaurants/:restaurant_id/edit', (req, res) => {
 app.post('/restaurants/:restaurant_id/edit', (req, res) => {
   const id = req.params.restaurant_id
   const name = req.body.name
-   const name_en = req.body.name_en   
    const category = req.body.category 
 
    const image = req.body.image
@@ -104,7 +103,7 @@ app.post('/restaurants/:restaurant_id/edit', (req, res) => {
   return Restaurant.findById(id)
     .then(restaurants => {
       restaurants.name = name
-      restaurants.name_en = name_en
+
       restaurants.category = category
       restaurants.image = image
       restaurants.location = location
