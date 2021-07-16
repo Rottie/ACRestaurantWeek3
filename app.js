@@ -29,16 +29,16 @@ const methodOverride = require('method-override')
 // 引用路由器
 const routes = require('./routes')
 
-app.use(methodOverride('_method'))
-
 
 app.engine('hbs', exphbs({ defaultLayout: 'main',extname:'.hbs' }))
 app.set('view engine', 'hbs')
 
-
+app.use(methodOverride('_method'))
 app.use(express.static('public'))
 // 用 app.use 規定每一筆請求都需要透過 body-parser 進行前置處理
 app.use(express.urlencoded({ extended: true }))
+
+
 
 
 
@@ -49,17 +49,6 @@ app.use(routes)
 
 
 
-//V.Searching
-app.get('/search', (req, res) => {
-  const keyword = req.query.keyword.trim().toLowerCase()
-  Restaurant.find()
-    .lean()
-    .then((restaurants) => {
-      restaurants = restaurants.filter((restaurant) =>restaurant.name.toLowerCase().includes(keyword) )
-      res.render('index', { restaurants: restaurants, keyword: keyword })
-    })
-    .catch(error => console.error(error)) // 錯誤處理
-})
 
 
 app.listen(port, () => {

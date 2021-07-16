@@ -16,5 +16,17 @@ router.get('/', (req, res) => {
     .catch(error => console.error(error)) // 錯誤處理
 })
 
+//V.Searching
+router.get('/search', (req, res) => {
+  const keyword = req.query.keyword.trim().toLowerCase()
+  Restaurant.find()
+    .lean()
+    .then((restaurants) => {
+      restaurants = restaurants.filter((restaurant) =>restaurant.name.toLowerCase().includes(keyword) )
+      res.render('index', { restaurants: restaurants, keyword: keyword })
+    })
+    .catch(error => console.error(error)) // 錯誤處理
+})
+
 // 匯出路由模組
 module.exports = router
