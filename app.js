@@ -23,6 +23,10 @@ db.once('open', () => {
 
 
 const exphbs = require('express-handlebars')
+const methodOverride = require('method-override') 
+// 設定每一筆請求都會透過 methodOverride 進行前置處理
+app.use(methodOverride('_method'))
+
 
 app.engine('hbs', exphbs({ defaultLayout: 'main',extname:'.hbs' }))
 app.set('view engine', 'hbs')
@@ -88,7 +92,7 @@ app.get('/restaurants/:restaurant_id/edit', (req, res) => {
 })
 
 //IV.Upadte
-app.post('/restaurants/:restaurant_id/edit', (req, res) => {
+app.put('/restaurants/:restaurant_id', (req, res) => {
   const id = req.params.restaurant_id
   const name = req.body.name
    const category = req.body.category 
@@ -119,7 +123,7 @@ app.post('/restaurants/:restaurant_id/edit', (req, res) => {
 
 
 //IV.DELETE
-app.post('/restaurants/:restaurant_id/delete', (req, res) => {
+app.delete('/restaurants/:restaurant_id', (req, res) => {
   const id = req.params.restaurant_id
   return Restaurant.findById(id)
     .then(restaurants => restaurants.remove())

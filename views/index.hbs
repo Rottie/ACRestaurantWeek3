@@ -74,7 +74,7 @@
               <!--查詢詳細餐廳資訊按鍵-->
               <button type="submit"><a href="./restaurants/{{ this._id }}">detail</a></button>
               <!--刪除按鍵-->
-              <form action="/restaurants/{{ this._id }}/delete" method="POST" style="display: inline;">
+              <form action="/restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
                 <button type="submit">delete</button>
               </form>
             </div>
