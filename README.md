@@ -48,8 +48,10 @@ A3 打造餐廳作業清單
 4.安裝
 4A.在終端機輸入指令 Clone 此專案至電腦
 git clone https://github.com/Rottie/ACRestaurantWeek3.git
+
 4B.進入專案目錄
-cd AC-A3Restaurant
+cd ACRestaurantWeek3
+
 
 4C.	安裝相關套件
 npm install express express-handlebars nodemon mongoose method-override
