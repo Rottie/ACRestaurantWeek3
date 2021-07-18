@@ -11,7 +11,7 @@ router.get('/new', (req, res) => {
 
 //I.Create new restaurant
 router.post('/', (req, res) => {
-  const name = req.body.name        
+  const name = req.body.name
    const category = req.body.category 
    const image = req.body.image
    const location = req.body.location  
@@ -20,13 +20,11 @@ router.post('/', (req, res) => {
    const rating = req.body.rating
    const description = req.body.description  
 
-
   return Restaurant.create({ name ,category,image,location,phone,google_map,rating,description})     // 存入資料庫
     .then(() => res.redirect('/')) // 新增完成後導回首頁
-   
+
     .catch(error => console.log(error))
 })
-
 
 //II.Read specific data
 router.get('/:restaurant_id', (req, res) => {
@@ -36,9 +34,6 @@ router.get('/:restaurant_id', (req, res) => {
     .then((restaurants) => res.render('show', { restaurants }))
     .catch(error => console.log(error))
 })
-
-
-
 
 //III.Update
 router.get('/:restaurant_id/edit', (req, res) => {
@@ -53,14 +48,13 @@ router.get('/:restaurant_id/edit', (req, res) => {
 router.put('/:restaurant_id', (req, res) => {
   const id = req.params.restaurant_id
   const name = req.body.name
-   const category = req.body.category 
-
-   const image = req.body.image
-   const location = req.body.location  
-   const phone = req.body.phone
-   const google_map = req.body.google_map  
-   const rating = req.body.rating
-   const description = req.body.description
+  const category = req.body.category
+  const image = req.body.image
+  const location = req.body.location
+  const phone = req.body.phone
+  const google_map = req.body.google_map
+  const rating = req.body.rating
+  const description = req.body.description
 
   return Restaurant.findById(id)
     .then(restaurants => {
@@ -79,7 +73,6 @@ router.put('/:restaurant_id', (req, res) => {
     .catch(error => console.log(error))
 })
 
-
 //IV.DELETE
 router.delete('/:restaurant_id', (req, res) => {
   const id = req.params.restaurant_id
@@ -88,8 +81,5 @@ router.delete('/:restaurant_id', (req, res) => {
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 })
-
-
-
 
 module.exports = router

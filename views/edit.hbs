@@ -1,37 +1,108 @@
-<form action="/restaurants/{{restaurants._id }}?_method=PUT" method="POST">
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-10 mx-auto">
+
+
+      <form action="/restaurants/{{restaurants._id }}?_method=PUT" method="POST">
+
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-utensils pr-2"></i>
+            名稱：
+          </span>
+          <input type="text" placeholder="name" name="name" value="{{ restaurants.name }}">
+        </p>
+
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-utensils pr-2"></i>
+            類別：
+          </span>
+          <input type="text" placeholder="category" name="category" value="{{ restaurants.category }}">
+        </p>
 
 
 
-  <h3>Restaurant name</h3>
-  <input type="text" placeholder="name" name="name" value="{{ restaurants.name }}">
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-image" aria-hidden="true"></i>
+            照片:
+          </span>
+          <input type="text" placeholder="image" name="image" value="{{ restaurants.image }}">
+        </p>
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-map-marker-alt pr-2"></i>
+            地址：
+          </span>
+          <input type="text" placeholder="location" name="location" value="{{ restaurants.location }}">
+
+        </p>
 
 
-  <h3>Restaurant category</h3>
-  <input type="text" placeholder="category" name="category" value="{{ restaurants.category }}">
-
-  <h3>Restaurant image url</h3>
-  <input type="text" placeholder="image" name="image" value="{{ restaurants.image }}">
-
-  <h3>Restaurant Location</h3>
-  <input type="text" placeholder="location" name="location" value="{{ restaurants.location }}">
-
-  <h3>Restaurant phone</h3>
-  <input type="text" placeholder="phone" name="phone" value="{{ restaurants.phone }}">
-
-  <h3>Restaurant Google Map Url</h3>
-  <input type="text" placeholder="google_map" name="google_map" value="{{ restaurants.google_map }}">
-
-  <h3>Restaurant rating</h3>
-  <input type="text" placeholder="rating" name="rating" value="{{ restaurants.rating }}">
-
-  <h3>Restaurant description</h3>
-  <input type="text" placeholder="description" name="description" value="{{ restaurants.description }}">
 
 
-  {{!-- 儲存按鍵 --}}
-  <button type="submit">Save</button>
-  {{!--返回主頁面按鍵 --}}
-  <button type="submit"><a href="/">back</a></button>
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-mobile-alt pr-2"></i>
+            電話：
+          </span>
+          <input type="text" placeholder="phone" name="phone" value="{{ restaurants.phone }}">
+
+        </p>
+
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-map-marker"></i>
+            Google Map鏈接：
+          </span>
+          <input type="text" placeholder="google_map" name="google_map" value="{{ restaurants.google_map }}">
+        </p>
+
+
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="far fa-star"></i>
+            評價：
+          </span>
+          <input type="text" placeholder="rating" name="rating" value="{{ restaurants.rating }}">
+
+        </p>
+
+
+
+
+        <p class="mb-1">
+          <span class="text-secondary">
+            <i class="fas fa-comments"></i>
+            介紹：
+          </span>
+
+          <textarea class="form-control" placeholder="description" name="description"
+            rows="3">{{restaurants.description}}</textarea>
+        </p>
+
+
+
+        {{!-- 儲存按鍵 --}}
+        <button class="btn btn-success" type="submit">Save</button>
+
+        <a class="btn btn-secondary" href="/">back</a>
+      </form>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
 
 
 </form>

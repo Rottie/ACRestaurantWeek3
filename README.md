@@ -43,6 +43,7 @@ A3 打造餐廳作業清單
 3E.實用套件 Nodemon v2.0.7
 3F.資料庫   MongoDB
 3G.映射工具 mongoose 5.13.2 
+3H.Method Override
 
 4.安裝
 4A.在終端機輸入指令 Clone 此專案至電腦
@@ -52,7 +53,7 @@ git clone https://github.com/Rottie/AC-A3Restaurant.git
 cd AC-A3Restaurant
 
 4C.	安裝相關套件
-npm install express express-handlebars nodemon mongoose
+npm install express express-handlebars nodemon mongoose method-override
 
 4D.新增種子資料
 npm run seed

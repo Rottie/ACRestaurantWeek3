@@ -5,13 +5,9 @@ const router = express.Router()
 // 匯出路由器
 // 引入 home 模組程式碼
 const home = require('./modules/home')
-// 將網址結構符合 / 字串的 request 導向 home 模組 
-
-
-
+// 將網址結構符合 / 字串的 request 導向 home 模組
 // 引入 todos 模組程式碼
 const restaurants = require('./modules/restaurants')
-
 
 router.use('/', home)
 
